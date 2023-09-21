@@ -10,10 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "google-map-react": "^2.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@iconify/icons-mdi": "^1.2.47",
+    "@iconify/react": "^4.1.1",
+    "@types/google-map-react": "^2.1.8",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",

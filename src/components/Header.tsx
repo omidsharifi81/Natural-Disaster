@@ -1,8 +1,9 @@
 
-export default function Header() {
+
+export const Header = () => {
   return (
     <header className=''>
-      <h1>Natural Disaster Tracker</h1>
+      <h1>Natural Disaster</h1>
     </header>
   )
 }
