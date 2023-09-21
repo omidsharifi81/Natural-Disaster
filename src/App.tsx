@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react'
 import  {Header}  from './components/Header'
+import  {Loader}  from './components/Loader'
+import axios from 'axios'
+
 import  Map  from './components/map'
  import './App.css'
 
@@ -10,8 +13,8 @@ function App() {
   useEffect(() => {
     const fetchEvents = async () => {
       setLoading(true)
-      const res = await fetch('https://eonet.sci.gsfc.nasa.gov/api/v2.1/events')
-      const { events } = await res.json()
+      const response = await axios.get('https://eonet.gsfc.nasa.gov/api/v2.1/events?limit=5');
+      const { events } = await response.data
 
       setEventData(events)
       setLoading(false)
@@ -24,8 +27,7 @@ function App() {
   return (
     <>
       <Header />
-      {/* <Map /> */}
-      { loading && <Map eventData={eventData}/> }
+     { loading && <Map eventData={eventData}/> }
     </>
   )
 }
