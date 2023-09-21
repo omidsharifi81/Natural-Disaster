@@ -1,11 +1,12 @@
-// import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import  {Header}  from './components/Header'
-// import  {Loader}  from './components/Loader'
-// import axios from 'axios'
+import  {Loader}  from './components/Loader'
+import axios from 'axios'
 
-// import  Map  from './components/map'
- import './App.css'
+import  Map  from './components/map'
 import { AddDisaster } from './components/AddDisaster'
+
+import './App.css'
 
 //useContext
 function App() {
@@ -19,21 +20,21 @@ function App() {
     //   const response = await axios.get('https://eonet.gsfc.nasa.gov/api/v2.1/events?limit=5');
     //   const { events } = await response.data
 
-  //     setEventData(events)
-  //     setLoading(false)
+      //     setEventData(events)
+      //     setLoading(false)
+      //   }
+
+      //   fetchEvents()
+      // }, [])
   //   }
-
-  //   fetchEvents()
-  // }, [])
-
+  // })
 
   return (
     <>
       <Header />
       <AddDisaster />
       {/* <Map /> */}
-      {/* { loading && <Map eventData={eventData}/> } */}
-     {/* { loading && <Map eventData={eventData}/> } */}
+        {/* { loading && <Map eventData={eventData}/> } */}
     </>
   )
 }
