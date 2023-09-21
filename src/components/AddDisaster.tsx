@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import axios from 'axios'
 import { Disaster } from '../type/disaster.type'
 import {dataDisaster} from '../data'
 
@@ -39,6 +40,17 @@ export const AddDisaster = () => {
 
 
     const onSubmitHandle = (data: Disaster) => {
+      const address = data.street1 && '+' && data.street2 
+
+      axios.get(`https://geocode.maps.co/search?q=${address}`)
+        .then(response => {
+          console.log(response.data)
+          console.log(response.data[0].lat, response.data[0].lon)
+        })
+        .catch(errors => {
+          console.log(errors)
+        })
+
       disasterList.push(data)
       console.log(data)
     } 
