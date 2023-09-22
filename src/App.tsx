@@ -1,10 +1,17 @@
-import Map from "./components/Map";
+import  {Header}  from './components/Header'
+import  Map   from './components/Map'
+import { AddDisaster } from './components/AddDisaster'
+
 import './App.css'
 
 const App = () => {
   return (
-    <Map />
-  );
-};
+    <>
+      <Header />
+      <AddDisaster />
+       <Map /> 
+    </>
+  )
+}
 
 export default App
