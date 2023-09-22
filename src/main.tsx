@@ -4,6 +4,7 @@ import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { AddDisaster } from './components/AddDisaster'
 
+import './index.css'
 
 const App = () => {
   return (
