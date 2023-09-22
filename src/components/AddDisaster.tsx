@@ -3,6 +3,8 @@ import { useForm } from 'react-hook-form'
 import axios from 'axios'
 import { Disaster } from '../type/disaster.type'
 import { dataDisaster } from '../data'
+import '../App.css'
+import '../index.css'
 
 export const AddDisaster = () => {
 
@@ -38,27 +40,27 @@ export const AddDisaster = () => {
   // }
 
 
-    const onSubmitHandle = (data: Disaster) => {
-      const address = data.street1 && '+' && data.street2 
+  const onSubmitHandle = (data: Disaster) => {
+    const address = data.street1 && '+' && data.street2
 
-      axios.get(`https://geocode.maps.co/search?q=${address}`)
-        .then(response => {
-          console.log(response.data)
-          console.log(response.data[0].lat, response.data[0].lon)
-        })
-        .catch(errors => {
-          console.log(errors)
-        })
+    axios.get(`https://geocode.maps.co/search?q=${address}`)
+      .then(response => {
+        console.log(response.data)
+        console.log(response.data[0].lat, response.data[0].lon)
+      })
+      .catch(errors => {
+        console.log(errors)
+      })
 
-      disasterList.push(data)
-      console.log(data)
-    } 
+    disasterList.push(data)
+    console.log(data)
+  }
 
   return (
-    <div className="">
+    <div className="col-span-1">
       {/* <h1>Disaster Update</h1> */}
-      <div className="">Enter new item</div>
-      <form className="" onSubmit={handleSubmit(onSubmitHandle)}>
+      <h5 className="">Enter new item</h5>
+      <form className="from-black" onSubmit={handleSubmit(onSubmitHandle)}>
         <div>
           <label htmlFor="name">Disaster name</label>
           <input
@@ -76,9 +78,9 @@ export const AddDisaster = () => {
             type="text"
             id="street1"
             {...register('street1')}
-          />s
+          />
         </div>
-        <div>
+        <div className="mb-6">
           <label htmlFor="street2">Second Street</label>
           <input
             className=""
@@ -88,7 +90,7 @@ export const AddDisaster = () => {
           />
         </div>
 
-        <div className="input-group-append">
+        <div className="input-group-append mb-10">
           <button className="btn btn-outline-primary"
             id="click-button"
             type="submit"
@@ -98,16 +100,13 @@ export const AddDisaster = () => {
         </div>
       </form>
 
-      <div className="">Desasters</div>
+      <h4 className="">Disasters</h4>
       <ul className="">
         {disasterList.map((disaster, index) => {
           return (
             <div key={index}>
               <li className="" >
                 {disaster.name}
-              </li>
-              <li>
-                {/* {disaster.category} */}
               </li>
               <li>
                 {disaster.street1}

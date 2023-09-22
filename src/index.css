@@ -124,6 +124,13 @@ body {
   height: auto;
 }
 
+
+.footer-logo {
+  display: inline-block;
+  max-width: 100px;
+  height: auto;
+}
+
 .logo:hover {
   cursor: pointer;
 }
@@ -131,4 +138,108 @@ body {
 .main-title {
   font-size: 60px;
   font-family: 'Croissant One', cursive;
+}
+
+h4 {
+  font-size: 30px;
+  font-family: 'Croissant One', cursive;
+}
+
+
+h5 {
+  font-size: 20px;
+  font-family: 'Croissant One', cursive;
+}
+
+label {
+  font-size: 14px;
+  font-family: 'Croissant One', cursive;
+}
+
+.btn-outline-primary {
+  position: relative;
+  z-index: 3;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+  border-color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 22px;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  transition: all 0.2s linear;
+}
+
+.btn-outline-primary {
+  text-decoration: none;
+}
+
+.btn-outline-primary:hover {
+  color: white;
+  background: #266572;
+  border-color: white;
+  transition: all 0.2s linear;
+}
+
+.btn-outline-primary:active {
+  border-radius: 22px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  border-radius: 10px !important;
+}
+
+input [type='text']:focus,
+input [type='email']:focus,
+input [type='url']:focus,
+input [type='password']:focus,
+input [type='number']:focus,
+input [type='date']:focus,
+input [type='datetime-local']:focus,
+input [type='month']:focus,
+input [type='search']:focus,
+input [type='tel']:focus,
+input [type='time']:focus,
+input [type='week']:focus,
+input [multiple]:focus,
+textarea:focus,
+select:focus,
+[type='text'],
+[type='email'],
+[type='url'],
+[type='password'],
+[type='number'],
+[type='date'],
+[type='datetime-local'],
+[type='month'],
+[type='search'],
+[type='tel'],
+[type='time'],
+[type='week'],
+[multiple],
+textarea,
+select,
+[type='text'],
+[type='email'],
+[type='url'],
+[type='password'],
+[type='number'],
+[type='date'],
+[type='datetime-local'],
+[type='month'],
+[type='search'],
+[type='tel'],
+[type='time'],
+[type='week'],
+[multiple],
+textarea,
+select {
+  border-color: #266572 !important;
+}
+
+ul {
+  list-style-type: disc;
 }
