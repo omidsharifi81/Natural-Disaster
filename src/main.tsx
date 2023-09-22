@@ -3,6 +3,7 @@ import Map from "./components/Map";
 import { Header } from './components/Header'
 import { AddDisaster } from './components/AddDisaster'
 
+import './index.css'
 
 const App = () => {
   return (
